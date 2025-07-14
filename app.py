@@ -36,13 +36,10 @@ stenosis = st.selectbox("Tracheal stenosis", [0, 1])
 
 input_df = pd.DataFrame([{
     "Age": age,
-#    "T": T,
     "NLR>2": wbc_nlr,
-#    "IL-6": il6,
     "DDI": ddi,
     "CRP>30 & LDH>300": crp_ldh,
     "Tracheal stenosis": stenosis,
-#    "Cavity": cavity
 }])
 
 # 预测与解释
