@@ -26,16 +26,16 @@ explainer = shap.Explainer(model, background_data)
 
 # 用户输入
 age = st.number_input("Age", value=5.0, step=0.1)
-wbc_nlr = st.selectbox("NLR > 2", [0, 1])
+wbc_nlr = st.selectbox("CRP>30 & LDH>300", [0, 1])
 ddi = st.number_input("DDI", value=0.5, step=0.01)
-crp_ldh = st.selectbox("CRP > 30 and LDH > 300", [0, 1])
+crp_ldh = st.selectbox("NLR>2", [0, 1])
 stenosis = st.selectbox("Tracheal stenosis", [0, 1])
 
 input_df = pd.DataFrame([{
     "Age": age,
-    "NLR>2": wbc_nlr,
+    "CRP>30 & LDH>300": wbc_nlr,
     "DDI": ddi,
-    "CRP>30 & LDH>300": crp_ldh,
+    "NLR>2": crp_ldh,
     "Tracheal stenosis": stenosis,
 }])
 
